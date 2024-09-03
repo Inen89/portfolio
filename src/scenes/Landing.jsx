@@ -1,6 +1,7 @@
+import AnchorLink from "react-anchor-link-smooth-scroll";
 import profileImg from "../assets/profile-image.jpg";
 
-export default function Landing() {
+export default function Landing({ setSelectedPage }) {
   const landingPageImg = (
     <img
       src={profileImg}
@@ -27,12 +28,27 @@ export default function Landing() {
         </div>
         {/* CALL TO ACTION */}
         <div className="flex mt-10 gap-6 justify-center">
-          <button className="bg-aqua p-2 rounded-md text-black">
+          <AnchorLink
+            className="relative bg-aqua border-aqua border-4 text-deep-blue rounded-lg py-3 px-7 font-semibold z-30
+          hover:text-aqua
+            before:content-[''] before:absolute before:inset-0 before:w-0 before:bg-deep-blue before:z-0
+            before:transition-all before:duration-500 
+            hover:before:w-full hover:before:z-[-1]"
+            onClick={() => setSelectedPage("contact")}
+            href="#contact"
+          >
             Contact Me
-          </button>
-          <button className="bg-aqua p-2 rounded-md text-black">
+          </AnchorLink>
+          <AnchorLink
+            className="relative rounded-lg border-aqua border-4 text-aqua py-3 px-10 z-30
+                      hover:text-deep-blue
+                      before:contet-[''] before:absolute before:inset-0 before:w-0 before:bg-aqua before:transition-all before:duration-500 before:z-0
+                      before:hover:w-full before:hover:z-[-1]"
+            onClick={() => setSelectedPage("contact")}
+            href="#contact"
+          >
             Let's Talk
-          </button>
+          </AnchorLink>
         </div>
       </div>
       {/* IMAGE SECTION */}

@@ -9,7 +9,7 @@ function App() {
     <>
       <Navbar selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
       <div className="w-5/6 mx-auto h-full">
-        <Landing />
+        <Landing setSelectedPage={setSelectedPage} />
       </div>
     </>
   );
