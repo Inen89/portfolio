@@ -49,6 +49,9 @@ export default function Landing({ setSelectedPage }) {
           >
             Let's Talk
           </AnchorLink>
+          <div>
+            <p>Social Media Icons</p>
+          </div>
         </div>
       </div>
       {/* IMAGE SECTION */}
