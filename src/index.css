@@ -5,6 +5,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .text-stroke-aqua {
+    -webkit-text-stroke: 0.7px aqua;
+  }
+}
+
 html,
 body,
 #root,

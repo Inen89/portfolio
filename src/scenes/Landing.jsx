@@ -1,6 +1,7 @@
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import profileImg from "../assets/profile-image.jpg";
 import SocialMediaIcons from "../components/SocialMediaIcons";
+import TextAnim from "../components/TextAnim";
 
 export default function Landing({ setSelectedPage }) {
   const landingPageImg = (
@@ -19,7 +20,9 @@ export default function Landing({ setSelectedPage }) {
           <p className="text-6xl font-poppins font-semibold text-start">
             Hi, I'm Grzegorz Łoś
           </p>
-          <p className="mt-6">FRONTEND DEVELOPER</p>
+          <div>
+            <TextAnim />
+          </div>
           <p className="mt-6 text-start">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat,
             nihil temporibus quasi ratione modi sed, veritatis, quaerat magnam
