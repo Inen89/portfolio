@@ -1,5 +1,6 @@
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import profileImg from "../assets/profile-image.jpg";
+import SocialMediaIcons from "../components/SocialMediaIcons";
 
 export default function Landing({ setSelectedPage }) {
   const landingPageImg = (
@@ -49,9 +50,9 @@ export default function Landing({ setSelectedPage }) {
           >
             Let's Talk
           </AnchorLink>
-          <div>
-            <p>Social Media Icons</p>
-          </div>
+        </div>
+        <div className="mt-10">
+          <SocialMediaIcons />
         </div>
       </div>
       {/* IMAGE SECTION */}
