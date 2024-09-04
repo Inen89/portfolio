@@ -17,12 +17,15 @@ module.exports = {
         grey: "#EDEDED",
         "deep-blue": "#081b29",
       },
+      boxShadow: {
+        aqua: "-30px -30px 20px  aqua",
+      },
 
-      // eslint-disable-next-line no-unused-vars
-      backgroundImage: (theme) => ({
+      backgroundImage: {
         "gradient-blue-green":
           "linear-gradient(90deg, #04D9FF 45%, #39FF14 90.73%)",
-      }),
+      },
+
       fontFamily: {
         playfair: ["Playfair Display", "serif"],
         opensans: ["Open Sans", "sans-serif"],
