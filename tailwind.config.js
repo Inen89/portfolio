@@ -23,7 +23,9 @@ module.exports = {
 
       backgroundImage: {
         "gradient-blue-green":
-          "linear-gradient(90deg, #04D9FF 45%, #39FF14 90.73%)",
+          "linear-gradient(90deg, #00E5FF 45%, #39FF14 90%)",
+        "gradient-green-yellow":
+          "linear-gradient(90deg, #39FF14 45%, #FFFF00 90%)",
       },
 
       fontFamily: {

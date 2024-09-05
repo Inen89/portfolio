@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import profileImg from "../assets/profile-image.jpg";
 import SocialMediaIcons from "../components/SocialMediaIcons";
@@ -18,7 +19,7 @@ export default function Landing({ setSelectedPage }) {
         {/* HEADINGS */}
         <div>
           <p className="text-6xl font-poppins font-semibold text-start">
-            Hi, I'm Grzegorz Łoś
+            Hi, I&apos;m Grzegorz Łoś
           </p>
           <div>
             <TextAnim />
@@ -51,7 +52,7 @@ export default function Landing({ setSelectedPage }) {
             onClick={() => setSelectedPage("contact")}
             href="#contact"
           >
-            Let's Talk
+            Let&apos;s Talk
           </AnchorLink>
         </div>
         <div className="mt-10">
