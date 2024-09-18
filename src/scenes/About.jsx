@@ -50,7 +50,7 @@ export default function About() {
       <div className="relative flex items-center justify-center w-full h-auto">
         {/* Rotating circle border */}
         <motion.div
-          className="absolute border-2 border-r-lime border-l-lime border-t-background border-b-background rounded-full w-3/12 aspect-square max-w-[270px] "
+          className="absolute border-2 border-x-lime  border-y-transparent rounded-full w-3/12 aspect-square max-w-[270px] "
           animate={{ rotate: 360 }}
           transition={{ repeat: Infinity, duration: 6, ease: "linear" }}
         ></motion.div>
@@ -68,9 +68,9 @@ export default function About() {
         {content}
       </div>
       <button
-        className="relative bg-lime border-lime border-4 text-deep-blue rounded-lg py-3 px-7 font-semibold z-30
+        className="relative bg-lime border-lime border-4 text-green rounded-lg py-3 px-7 font-semibold z-30
         hover:text-lime
-            before:content-[''] before:absolute before:inset-0 before:w-0 before:bg-deep-blue before:z-0
+            before:content-[''] before:absolute before:inset-0 before:w-0 before:bg-green before:z-0
             before:transition-all before:duration-500 
             hover:before:w-full hover:before:z-[-1]"
         onClick={() => setShowMore((prevState) => !prevState)}

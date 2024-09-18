@@ -62,7 +62,7 @@ export default function Landing({ setSelectedPage }) {
       {/* IMAGE SECTION */}
       <div className="flex justify-center basis-3/5 mt-32">
         <div
-          className="relative w-8/12 ml-10 z-0 hover:shadow-aqua before:absolute before:border-2
+          className="relative w-8/12 max-w-[400px] ml-10 z-0 hover:shadow-ladning-aqua before:absolute before:border-2
           before:border-aqua before:-top-10 before:-left-10 before:w-full 
             before:max-w-[400px] before:h-full before:z-[-1]"
         >
