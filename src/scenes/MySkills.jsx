@@ -1,4 +1,4 @@
-import skillsImg from "../assets/skills.png";
+import skillsImg from "../assets/img/skills.png";
 import InteractiveModal from "../components/InteractiveModal";
 
 import FrontendText from "./MySkills/FrontendText";

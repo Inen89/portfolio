@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import AnchorLink from "react-anchor-link-smooth-scroll";
-import profileImg from "../assets/profile-image.jpg";
+import profileImg from "../assets/img/profile-image.jpg";
 import SocialMediaIcons from "../components/SocialMediaIcons";
 import TextAnim from "../components/TextAnim";
 
@@ -13,7 +13,7 @@ export default function Landing({ setSelectedPage }) {
     />
   );
   return (
-    <section className="flex justify-between items-center h-full gap-16 py-10">
+    <section className="flex justify-between items-center h-full gap-16 py-48">
       {/* MAIN SECTION */}
       <div className="basis-2/5 mt-32">
         {/* HEADINGS */}

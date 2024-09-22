@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-import aboutMeImg from "../assets/AboutMe.jpg";
+import aboutMeImg from "../assets/img/AboutMe.jpg";
 import { useState } from "react";
 
 export default function About() {

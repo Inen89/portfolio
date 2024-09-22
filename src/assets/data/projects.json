@@ -1,0 +1,50 @@
+[
+  {
+    "title": "Portfolio",
+    "summary": "This is an interactive web application that showcases my frontend skills in an engaging way. Users can explore various technologies and projects I have worked on. With animations and responsive design, it provides a smooth experience on all devices.",
+    "technologies": [
+      "React",
+      "JavaScript",
+      "CSS",
+      "HTML",
+      "Tailwind CSS",
+      "Framer Motion"
+    ]
+  },
+  {
+    "title": "Dashboard",
+    "summary": "Project comming soon...",
+    "technologies": [
+      "React",
+      "JavaScript",
+      "CSS",
+      "HTML",
+      "Tailwind CSS",
+      "Framer Motion"
+    ]
+  },
+  {
+    "title": "Online shop",
+    "summary": "Project to be realised in the future",
+    "technologies": [
+      "React",
+      "JavaScript",
+      "CSS",
+      "HTML",
+      "Tailwind CSS",
+      "Framer Motion"
+    ]
+  },
+  {
+    "title": "Blog page",
+    "summary": "Project to be realised in the future",
+    "technologies": [
+      "React",
+      "JavaScript",
+      "CSS",
+      "HTML",
+      "Tailwind CSS",
+      "Framer Motion"
+    ]
+  }
+]

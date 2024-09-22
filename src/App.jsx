@@ -4,6 +4,7 @@ import Landing from "./scenes/Landing";
 import LineGradient from "./components/LineGradient";
 import About from "./scenes/About";
 import MySkills from "./scenes/MySkills";
+import Projects from "./scenes/Projects";
 
 function App() {
   const [selectedPage, setSelectedPage] = useState("home");
@@ -26,7 +27,13 @@ function App() {
           <MySkills />
         </div>
       </div>
-      <LineGradient gradientColor="bg-gradient-green-yellow" />
+      <LineGradient gradientColor="bg-gradient-yellow-pink" />
+      <div className="bg-dark-pink">
+        <div className="w-5/6 mx-auto h-full ">
+          <Projects />
+        </div>
+      </div>
+      <LineGradient gradientColor="bg-gradient-pink-white" />
     </main>
   );
 }
