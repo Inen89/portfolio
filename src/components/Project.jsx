@@ -3,6 +3,7 @@ export default function Project({
   summary,
   technologies,
   hasImage = true,
+  image,
 }) {
   let opacity =
     hasImage === false
@@ -34,7 +35,7 @@ export default function Project({
       {hasImage !== "false" && (
         <img
           className="object-fill w-full h-full"
-          src={`src/assets/img/${projectTitle}.jpg`}
+          src={image}
           alt={projectTitle}
         />
       )}

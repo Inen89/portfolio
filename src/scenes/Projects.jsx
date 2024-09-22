@@ -1,6 +1,8 @@
 import Project from "../components/Project";
 import projectsData from "../assets/data/projects.json";
 
+import portfolioImg from "../assets/img/portfolio.jpg";
+
 export default function Projects() {
   return (
     <section id="projects" className="pt-48 pb-48">
@@ -36,6 +38,7 @@ export default function Projects() {
             title={projectsData[0].title}
             summary={projectsData[0].summary}
             technologies={projectsData[0].technologies}
+            image={portfolioImg}
           />
           <Project
             title={projectsData[1].title}
