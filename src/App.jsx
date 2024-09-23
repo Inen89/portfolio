@@ -6,6 +6,7 @@ import About from "./scenes/About";
 import MySkills from "./scenes/MySkills";
 import Projects from "./scenes/Projects";
 import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
 function App() {
   const [selectedPage, setSelectedPage] = useState("home");
@@ -39,6 +40,9 @@ function App() {
         <dir className="w-5/6 mx-auto h-full">
           <Contact />
         </dir>
+      </div>
+      <div>
+        <Footer />
       </div>
     </main>
   );
