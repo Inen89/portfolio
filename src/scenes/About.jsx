@@ -42,7 +42,10 @@ export default function About() {
   }
 
   return (
-    <section className="flex flex-col justify-center items-center gap-12 py-16">
+    <section
+      id="about"
+      className="flex flex-col justify-center items-center gap-12 py-16"
+    >
       <h2 className="heading text-6xl mb-10">
         About <span className="text-lime">Me</span>
       </h2>

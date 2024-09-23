@@ -13,7 +13,10 @@ export default function Landing({ setSelectedPage }) {
     />
   );
   return (
-    <section className="flex justify-between items-center h-full gap-16 py-48">
+    <section
+      id="home"
+      className="flex justify-between items-center h-full gap-16 py-48"
+    >
       {/* MAIN SECTION */}
       <div className="basis-2/5 mt-32">
         {/* HEADINGS */}

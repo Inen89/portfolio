@@ -34,7 +34,7 @@ export default function Contact() {
   const errorStyles = "text-red p-1 max-w-full";
 
   return (
-    <section className="py-48">
+    <section id="contact" className="py-48">
       {/* Header */}
       <header>
         <h2 className="text-6xl text-grey mb-10 text-center">

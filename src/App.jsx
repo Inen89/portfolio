@@ -1,19 +1,38 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Navbar from "./scenes/NavBar";
 import Landing from "./scenes/Landing";
 import LineGradient from "./components/LineGradient";
 import About from "./scenes/About";
 import MySkills from "./scenes/MySkills";
 import Projects from "./scenes/Projects";
-import Contact from "./components/Contact";
+import Contact from "./scenes/Contact";
 import Footer from "./components/Footer";
 
 function App() {
   const [selectedPage, setSelectedPage] = useState("home");
+  const [isTopOfPage, setIsTopOfPage] = useState(true);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY === 0) {
+        setIsTopOfPage(true);
+        setSelectedPage("home");
+      } else {
+        setIsTopOfPage(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <main className="flex flex-col">
-      <Navbar selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
+      <Navbar
+        selectedPage={selectedPage}
+        setSelectedPage={setSelectedPage}
+        isTopOfPage={isTopOfPage}
+      />
       <div className="w-5/6 mx-auto h-full mb-10">
         <Landing setSelectedPage={setSelectedPage} />
       </div>

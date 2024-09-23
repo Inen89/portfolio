@@ -11,7 +11,7 @@ import FuturePlansText from "./MySkills/FuturePlansText";
 const MySkills = () => {
   return (
     // poprawić margines
-    <section className="relative pt-10 pb-10 mb-40">
+    <section id="skills" className="relative pt-10 pb-10 mb-40">
       {/* HEADER AND IMAGE SECTION */}
       <div className="flex justify-center  mt-10">
         <div className="w-7/12 text-left">
