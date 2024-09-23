@@ -5,6 +5,7 @@ import LineGradient from "./components/LineGradient";
 import About from "./scenes/About";
 import MySkills from "./scenes/MySkills";
 import Projects from "./scenes/Projects";
+import Contact from "./components/Contact";
 
 function App() {
   const [selectedPage, setSelectedPage] = useState("home");
@@ -34,6 +35,11 @@ function App() {
         </div>
       </div>
       <LineGradient gradientColor="bg-gradient-pink-white" />
+      <div className="bg-dark-grey">
+        <dir className="w-5/6 mx-auto h-full">
+          <Contact />
+        </dir>
+      </div>
     </main>
   );
 }

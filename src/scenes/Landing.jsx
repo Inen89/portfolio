@@ -24,11 +24,16 @@ export default function Landing({ setSelectedPage }) {
           <div>
             <TextAnim />
           </div>
-          <p className="mt-6 text-start">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat,
-            nihil temporibus quasi ratione modi sed, veritatis, quaerat magnam
-            corporis veniam exercitationem magni voluptate deserunt eum et
-            aliquam cum. Hic, quibusdam!
+          <h3 className="mt-6">Welcome to My Portfolio!</h3>
+          <p className="mt-2 text-start">
+            As a passionate frontend developer, I thrive on creating visually
+            appealing and user-friendly web applications. With a strong
+            foundation in modern technologies and a keen eye for design, I
+            strive to bring innovative ideas to life. Explore my projects to see
+            how I turn concepts into engaging digital experiences. Whether it’s
+            developing interactive UIs, enhancing user experiences, or diving
+            into the latest frameworks, I’m always eager to learn and push the
+            boundaries of web development.
           </p>
         </div>
         {/* CALL TO ACTION */}
@@ -47,7 +52,7 @@ export default function Landing({ setSelectedPage }) {
           <AnchorLink
             className="relative rounded-lg border-aqua border-4 text-aqua py-3 px-10 z-30
                       hover:text-deep-blue
-                      before:contet-[''] before:absolute before:inset-0 before:w-0 before:bg-aqua before:transition-all before:duration-500 before:z-0
+                      before:content-[''] before:absolute before:inset-0 before:w-0 before:bg-aqua before:transition-all before:duration-500 before:z-0
                       before:hover:w-full before:hover:z-[-1]"
             onClick={() => setSelectedPage("contact")}
             href="#contact"

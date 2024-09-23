@@ -23,8 +23,8 @@ module.exports = {
         orange: "#FF4500",
         red: "#d01b1b",
         "dark-grey": "#2E2E2E",
-        grey: "#EDEDED",
-        white: "#F0F0F0",
+        grey: "#616161",
+        white: "#EDEDED",
       },
       boxShadow: {
         "ladning-aqua": "-30px -30px 20px #00E5FF",
