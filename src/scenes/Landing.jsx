@@ -40,7 +40,7 @@ export default function Landing({ setSelectedPage }) {
           </p>
         </div>
         {/* CALL TO ACTION */}
-        <div className="flex mt-10 gap-6 justify-center">
+        <div className="flex mt-10 gap-6 justify-start">
           <AnchorLink
             className="relative bg-aqua border-aqua border-4 text-deep-blue rounded-lg py-3 px-7 font-semibold z-30
           hover:text-aqua
@@ -48,9 +48,9 @@ export default function Landing({ setSelectedPage }) {
             before:transition-all before:duration-500 
             hover:before:w-full hover:before:z-[-1]"
             onClick={() => setSelectedPage("contact")}
-            href="#contact"
+            href="#about"
           >
-            Contact Me
+            Get to Know Me
           </AnchorLink>
           <AnchorLink
             className="relative rounded-lg border-aqua border-4 text-aqua py-3 px-10 z-30

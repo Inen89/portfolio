@@ -28,7 +28,7 @@ const SocialMediaIcons = () => {
     <div className="flex justify-center md:justify-start my-5 gap-7">
       <a
         className="hover:hover:opacity-50 transition duration-500"
-        href="https://www.linkedin.com"
+        href="https://www.linkedin.com/in/glos/"
         target="_blank"
         rel="noreferrer"
       >
