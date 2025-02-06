@@ -12,6 +12,11 @@
     ]
   },
   {
+    "title": "Smart guys app",
+    "summary": "This is a user management application built with Angular, demonstrating my ability to work with modern frontend frameworks. It features full CRUD functionality, lazy-loaded components for optimized performance, and a responsive design for seamless usability across devices.",
+    "technologies": ["Angular", "JavaScript", "CSS", "HTML", "Bootstrap"]
+  },
+  {
     "title": "Dashboard",
     "summary": "Project comming soon...",
     "technologies": [

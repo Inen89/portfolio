@@ -1,5 +1,6 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useRef } from "react";
+import { createPortal } from "react-dom";
 
 const InteractiveModal = ({
   idNumber,
@@ -104,39 +105,41 @@ const InteractiveModal = ({
           ></div>
         </div>
       </motion.div>
-
-      <AnimatePresence>
-        {isOpen && (
-          <>
-            {/* backdrop */}
-            <motion.div
-              className="fixed inset-0 bg-black z-10"
-              variants={backdropVariants}
-              initial="hidden"
-              animate="visible"
-              exit="exit"
-              onClick={() => setIsOpen(false)}
-            />
-
-            {/* modal */}
-            <motion.div
-              className={`fixed left-0 top-0 rounded-lg p-10 shadow-xl z-20  w-7/12 transform origin-bottom-left ${colorlVariants[color]}`}
-              variants={modalVariants}
-              initial="hidden"
-              animate="visible"
-              exit="exit"
-            >
-              <button
-                className="absolute top-4 right-4"
+      {createPortal(
+        <AnimatePresence>
+          {isOpen && (
+            <>
+              {/* backdrop */}
+              <motion.div
+                className="fixed inset-0 bg-black z-40"
+                variants={backdropVariants}
+                initial="hidden"
+                animate="visible"
+                exit="exit"
                 onClick={() => setIsOpen(false)}
+              />
+
+              {/* modal */}
+              <motion.div
+                className={`fixed left-0 top-0 rounded-lg p-10 shadow-xl z-50  w-7/12 transform origin-bottom-left ${colorlVariants[color]}`}
+                variants={modalVariants}
+                initial="hidden"
+                animate="visible"
+                exit="exit"
               >
-                ✖
-              </button>
-              {children}
-            </motion.div>
-          </>
-        )}
-      </AnimatePresence>
+                <button
+                  className="absolute top-4 right-4"
+                  onClick={() => setIsOpen(false)}
+                >
+                  ✖
+                </button>
+                {children}
+              </motion.div>
+            </>
+          )}
+        </AnimatePresence>,
+        document.getElementById("dialog")
+      )}
     </div>
   );
 };

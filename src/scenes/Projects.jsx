@@ -2,6 +2,7 @@ import Project from "../components/Project";
 import projectsData from "../assets/data/projects.json";
 
 import portfolioImg from "../assets/img/portfolio.jpg";
+import smartGuysImg from "../assets/img/smart-guys.jpg";
 
 export default function Projects() {
   return (
@@ -43,7 +44,9 @@ export default function Projects() {
           <Project
             title={projectsData[1].title}
             summary={projectsData[1].summary}
-            hasImage={false}
+            technologies={projectsData[1].technologies}
+            image={smartGuysImg}
+            href={"https://inen89.github.io/smart-guys-app/"}
           />
           {/* ROW 2 */}
           <Project
