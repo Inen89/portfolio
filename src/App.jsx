@@ -7,6 +7,7 @@ import MySkills from "./scenes/MySkills";
 import Projects from "./scenes/Projects";
 import Contact from "./scenes/Contact";
 import Footer from "./components/Footer";
+import DotGroup from "./components/DotGroup";
 
 function App() {
   const [selectedPage, setSelectedPage] = useState("home");
@@ -33,6 +34,12 @@ function App() {
         setSelectedPage={setSelectedPage}
         isTopOfPage={isTopOfPage}
       />
+      <div className=" mx-auto h-full z-20 ">
+        <DotGroup
+          selectedPage={selectedPage}
+          setSelectedPage={setSelectedPage}
+        />
+      </div>
       <div className="w-5/6 mx-auto h-full mb-10">
         <Landing setSelectedPage={setSelectedPage} />
       </div>
