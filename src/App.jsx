@@ -40,28 +40,30 @@ function App() {
           setSelectedPage={setSelectedPage}
         />
       </div>
+      <div className="bg-gradient-deepblue-green">
       <div className="w-5/6 mx-auto h-full mb-10">
         <Landing setSelectedPage={setSelectedPage} />
       </div>
-      <LineGradient gradientColor="bg-gradient-blue-green" />
-      <div className="bg-green">
+      </div>
+      <LineGradient gradientColor="bg-gradient-aqua-lime" />
+      <div className="bg-gradient-green-yellow">
         <div className="w-5/6 mx-auto h-full mb-1">
           <About />
         </div>
       </div>
-      <LineGradient gradientColor="bg-gradient-green-yellow" />
-      <div className="bg-dark-yellow z-0">
+      <LineGradient gradientColor="bg-gradient-lime-lemon" />
+      <div className="bg-gradient-yellow-pink z-0">
         <div className="w-5/6 mx-auto h-full ">
           <MySkills />
         </div>
       </div>
-      <LineGradient gradientColor="bg-gradient-yellow-pink" />
-      <div className="bg-dark-pink">
+      <LineGradient gradientColor="bg-gradient-lemon-magenta" />
+      <div className="bg-gradient-pink-grey">
         <div className="w-5/6 mx-auto h-full ">
           <Projects />
         </div>
       </div>
-      <LineGradient gradientColor="bg-gradient-pink-white" />
+      <LineGradient gradientColor="bg-gradient-magenta-white" />
       <div className="bg-dark-grey">
         <dir className="w-5/6 mx-auto h-full">
           <Contact />

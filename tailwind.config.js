@@ -37,12 +37,17 @@ export default {
       },
 
       backgroundImage: {
-        "gradient-blue-green": "linear-gradient(90deg, aqua 45%, lime 90%)",
-        "gradient-green-yellow":
+        "gradient-deepblue-green": "linear-gradient(160deg, #081b29 60%, #081B09 100%)",
+        "gradient-aqua-lime": 
+          "linear-gradient(90deg, aqua 45%, lime 90%)",
+        "gradient-green-yellow": "linear-gradient(160deg, #081B09 60%, #212100 100%)",
+        "gradient-lime-lemon":
           "linear-gradient(90deg, lime 45%, #FFFF00 90%)",
-        "gradient-yellow-pink":
+        "gradient-yellow-pink": "linear-gradient(160deg, #212100 60%, #210011 100%)",
+        "gradient-lemon-magenta":
           "linear-gradient(90deg, #FFFF00 45%, #E90076 90%)",
-        "gradient-pink-white":
+        "gradient-pink-grey": "linear-gradient(160deg, #210011 60%, #2E2E2E 100%)",
+        "gradient-magenta-white":
           "linear-gradient(90deg, #E90076 45%, #F0F0F0 90%)",
       },
 
