@@ -41,9 +41,9 @@ function App() {
         />
       </div>
       <div className="bg-gradient-deepblue-green">
-      <div className="w-5/6 mx-auto h-full mb-10">
-        <Landing setSelectedPage={setSelectedPage} />
-      </div>
+        <div className="w-5/6 mx-auto h-full mb-10">
+          <Landing setSelectedPage={setSelectedPage} />
+        </div>
       </div>
       <LineGradient gradientColor="bg-gradient-aqua-lime" />
       <div className="bg-gradient-green-yellow">

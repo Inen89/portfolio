@@ -20,16 +20,16 @@ export default function TextAnim() {
   }, []);
 
   return (
-    <span className="relative flex  text-lg font-semibold whitespace-nowrap overflow-visible mt-5 ">
+    <span className="relative flex items-center text-lg font-semibold whitespace-nowrap overflow-visible mt-5 ">
       {/* Text outline */}
-      <span className="absolute h-full text-3xl font-semibold text-stroke-aqua text-transparent z-0 font-poppins ">
+      <span className="relative left-0 top-0 h-full text-3xl font-semibold text-stroke-aqua text-transparent z-0 font-poppins ">
         FRONTEND DEVELOPER
       </span>
 
       {/* Text fill and cursor */}
-      <span className="relative z-10 flex items-center">
+      <span className="absolute z-10 flex items-center">
         {/* Text fill */}
-        <motion.span className="h-full bg-deep-blue overflow-visible text-3xl font-semibold text-stroke-aqua text-aqua font-poppins">
+        <motion.span className="h-full bg-transparent overflow-visible text-3xl font-semibold text-stroke-aqua text-aqua font-poppins">
           {displayText}
         </motion.span>
         {/* Cursor */}

@@ -37,16 +37,18 @@ export default {
       },
 
       backgroundImage: {
-        "gradient-deepblue-green": "linear-gradient(160deg, #081b29 60%, #081B09 100%)",
-        "gradient-aqua-lime": 
-          "linear-gradient(90deg, aqua 45%, lime 90%)",
-        "gradient-green-yellow": "linear-gradient(160deg, #081B09 60%, #212100 100%)",
-        "gradient-lime-lemon":
-          "linear-gradient(90deg, lime 45%, #FFFF00 90%)",
-        "gradient-yellow-pink": "linear-gradient(160deg, #212100 60%, #210011 100%)",
+        "gradient-deepblue-green":
+          "linear-gradient(160deg, #081b29 60%, #081B09 100%)",
+        "gradient-aqua-lime": "linear-gradient(90deg, aqua 45%, lime 90%)",
+        "gradient-green-yellow":
+          "linear-gradient(160deg, #081B09 60%, #212100 100%)",
+        "gradient-lime-lemon": "linear-gradient(90deg, lime 45%, #FFFF00 90%)",
+        "gradient-yellow-pink":
+          "linear-gradient(160deg, #212100 60%, #210011 100%)",
         "gradient-lemon-magenta":
           "linear-gradient(90deg, #FFFF00 45%, #E90076 90%)",
-        "gradient-pink-grey": "linear-gradient(160deg, #210011 60%, #2E2E2E 100%)",
+        "gradient-pink-grey":
+          "linear-gradient(160deg, #210011 60%, #2E2E2E 100%)",
         "gradient-magenta-white":
           "linear-gradient(90deg, #E90076 45%, #F0F0F0 90%)",
       },
@@ -56,6 +58,14 @@ export default {
         opensans: ["Open Sans", "sans-serif"],
         poppins: ["Poppins", "sans-serif"],
       },
+    },
+    screens: {
+      xs: "480px",
+      ss: "620px",
+      sm: "768px",
+      md: "1060px",
+      lg: "1200px",
+      xl: "1700px",
     },
   },
   plugins: [],
