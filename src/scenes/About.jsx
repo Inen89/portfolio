@@ -7,7 +7,7 @@ export default function About() {
   const [showMore, setShowMore] = useState(false);
 
   const paragraphStyles =
-    "p-4 px-6 rounded-md hover:bg-lime hover:bg-opacity-40";
+    "py-4 sm:px-6 rounded-md hover:bg-lime hover:bg-opacity-40";
 
   const paragraphs = [
     `Hi! My name is Grzegorz Łoś, and programming is my passion, which
@@ -110,7 +110,7 @@ export default function About() {
       <div className="about-content">
         <h3 className="text-center text-4xl mt-10">Frontend Developer</h3>
 
-        <div className="text-lg tracking-wider leading-relaxed p-8">
+        <div className="text-lg tracking-wider leading-relaxed py-8 sm:px-8">
           <AnimatePresence>
             {paragraphs
               .slice(0, showMore ? paragraphs.length : 1)
