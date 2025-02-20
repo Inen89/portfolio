@@ -1,12 +1,12 @@
 import { motion } from "framer-motion";
 
 export default function OtherText() {
-  const listClass = `p-2 px-4 rounded-md w-full hover:bg-black hover:bg-opacity-20 hover:transition-all hover:brightness-200 hover:shadow-md
-             hover:shadow-black hover:scale-105  hover:duration-500`;
+  const listClass = `p-1 sm:p-2 px-2 sm:px-4 rounded-md w-full text-xs hover:bg-black hover:bg-opacity-20 hover:transition-all hover:brightness-200
+     hover:shadow-md hover:shadow-black hover:scale-105  hover:duration-500`;
   const boldClass = "font-bold";
   return (
     <div className="px-8">
-      <h3 className="text-3xl font-semibold my-4">Other</h3>
+      <h3 className="text-xl sm:text-3xl font-semibold mb-2 sm:mb-4">Other</h3>
       <motion.ul
         className="flex flex-col list-[square] justify-center"
         initial={{ opacity: 0, y: 20 }}

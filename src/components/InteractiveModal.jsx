@@ -74,7 +74,7 @@ const InteractiveModal = ({
   //#endregion
 
   return (
-    <div className="relative left-0 top-0 inline-block w-1/3 h-32">
+    <div className="relative left-0 top-0 inline-block w-full p-2 sm:w-1/2 md:w-1/3 h-32 mb-6">
       {/* modal trigger */}
       <motion.div
         className="relative top-0 left-0 cursor-pointer rounded-lg hover:shadow-neon-yellow "
@@ -121,14 +121,14 @@ const InteractiveModal = ({
 
               {/* modal */}
               <motion.div
-                className={`fixed left-0 top-0 rounded-lg p-10 shadow-xl z-50  w-7/12 transform origin-bottom-left ${colorlVariants[color]}`}
+                className={`fixed left-0 top-0 rounded-lg p-2 sm:p-10 shadow-xl z-50 w-10/12 sm:w-7/12 transform origin-bottom-left ${colorlVariants[color]}`}
                 variants={modalVariants}
                 initial="hidden"
                 animate="visible"
                 exit="exit"
               >
                 <button
-                  className="absolute top-4 right-4"
+                  className="absolute top-2 sm:top-4 right-2 sm:right-4"
                   onClick={() => setIsOpen(false)}
                 >
                   ✖

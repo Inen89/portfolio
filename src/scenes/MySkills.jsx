@@ -7,14 +7,39 @@ import AutomationText from "./MySkills/AutomationText";
 import OtherText from "./MySkills/OtherText";
 import EducationText from "./MySkills/EducationText";
 import FuturePlansText from "./MySkills/FuturePlansText";
+import useMediaQuery from "../hooks/useMediaQuery";
 
 const MySkills = () => {
+  const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
   return (
     // poprawić margines
     <section id="skills" className="relative pt-24 pb-10 mb-40">
       {/* HEADER AND IMAGE SECTION */}
-      <div className="flex justify-center  mt-10">
-        <div className="w-7/12 text-left">
+      <div className="md:flex justify-center items-center mt-10">
+        {/* DOPRACOWAĆ OBRAZEK */}
+        <div className="flex justify-center md:order-2 md:justify-start">
+          {isAboveMediumScreens ? (
+            <div
+              className="relative z-0 base-5/12 h-fit mt-10 mx-16  before:absolute before:-top-10 before:-left-10  
+          before:w-full before:h-full before:border-2 before:border-lemon before:z-[-1]"
+            >
+              <img
+                alt="skills"
+                src={skillsImg}
+                className="z-10 w-full  max-w-[400px] "
+              />
+            </div>
+          ) : (
+            <div>
+              <img
+                alt="skills"
+                src={skillsImg}
+                className="z-10 w-full max-w-[400px]"
+              />
+            </div>
+          )}
+        </div>
+        <div className="basis-7/12 text-center md:text-left mt-10">
           <p className="font-playfair font-semibold text-6xl mb-5">
             My<span className="text-lemon">SKILLS</span>
           </p>
@@ -30,17 +55,10 @@ const MySkills = () => {
             making me a well-rounded candidate for any development role.
           </p>
         </div>
-
-        <div
-          className="relative z-0 w-5/12 mt-10 mx-16  max-w-[400px] before:absolute before:-top-10 before:-left-10  
-                    before:w-full before:h-full before:border-2 before:border-lemon before:z-[-1]"
-        >
-          <img alt="skills" src={skillsImg} className="z-10 " />
-        </div>
       </div>
       {/* SKILLS */}
 
-      <div className="flex justify-between mt-16 gap-32">
+      <div className="flex flex-wrap justify-left mt-16  sm:gap-32">
         <InteractiveModal
           idNumber="01"
           title="Frontend"
@@ -65,8 +83,6 @@ const MySkills = () => {
         >
           <AutomationText />
         </InteractiveModal>
-      </div>
-      <div className="flex justify-between mt-16 gap-32">
         <InteractiveModal
           idNumber="04"
           title="Other"
@@ -92,6 +108,7 @@ const MySkills = () => {
           <FuturePlansText />
         </InteractiveModal>
       </div>
+      <div className="flex justify-between mt-16 md:gap-32"></div>
     </section>
   );
 };

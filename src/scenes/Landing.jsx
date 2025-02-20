@@ -3,10 +3,10 @@ import AnchorLink from "react-anchor-link-smooth-scroll";
 import profileImg from "../assets/img/profile-image.jpg";
 import SocialMediaIcons from "../components/SocialMediaIcons";
 import TextAnim from "../components/TextAnim";
-import useMeadiaQuery from "../hooks/useMediaQuery";
+import useMediaQuery from "../hooks/useMediaQuery";
 
 export default function Landing({ setSelectedPage }) {
-  const isAboveMediumScreens = useMeadiaQuery("(min-width: 1060px)");
+  const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
   const landingPageImg = (
     <img
       src={profileImg}
