@@ -11,12 +11,50 @@ import useMediaQuery from "../hooks/useMediaQuery";
 
 const MySkills = () => {
   const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
+  const isAboveSmallScreens = useMediaQuery("(min-width:768px)");
+
+  const positions = {
+    small: ["left", "left", "left", "left", "left", "left"],
+    medium: ["left", "center", "left", "center", "left", "center"],
+    large: ["left", "center", "right", "left", "center", "right"],
+  };
+
+  const getShadowPosition = (index) => {
+    if (isAboveMediumScreens) return positions.large[index];
+    if (isAboveSmallScreens && !isAboveMediumScreens)
+      return positions.medium[index];
+    return positions.small[index];
+  };
+
+  const modals = [
+    { id: "01", title: "Frontend", color: "blue", content: <FrontendText /> },
+    { id: "02", title: "Backend", color: "green", content: <BackendText /> },
+    {
+      id: "03",
+      title: "Automation and SCADA",
+      color: "yellow",
+      content: <AutomationText />,
+    },
+    { id: "04", title: "Other", color: "pink", content: <OtherText /> },
+    {
+      id: "05",
+      title: "Education",
+      color: "orange",
+      content: <EducationText />,
+    },
+    {
+      id: "06",
+      title: "Future plans",
+      color: "white",
+      content: <FuturePlansText />,
+    },
+  ];
+
   return (
     // poprawić margines
     <section id="skills" className="relative pt-24 pb-10 mb-40">
       {/* HEADER AND IMAGE SECTION */}
       <div className="md:flex justify-center items-center mt-10">
-        {/* DOPRACOWAĆ OBRAZEK */}
         <div className="flex justify-center md:order-2 md:justify-start">
           {isAboveMediumScreens ? (
             <div
@@ -58,55 +96,20 @@ const MySkills = () => {
       </div>
       {/* SKILLS */}
 
-      <div className="flex flex-wrap justify-left mt-16  sm:gap-32">
-        <InteractiveModal
-          idNumber="01"
-          title="Frontend"
-          color="blue"
-          shadowPosition="left"
-        >
-          <FrontendText />
-        </InteractiveModal>
-        <InteractiveModal
-          idNumber="02"
-          title="Backend"
-          color="green"
-          shadowPosition="center"
-        >
-          <BackendText />
-        </InteractiveModal>
-        <InteractiveModal
-          idNumber="03"
-          title="Automation and SCADA"
-          color="yellow"
-          shadowPosition="right"
-        >
-          <AutomationText />
-        </InteractiveModal>
-        <InteractiveModal
-          idNumber="04"
-          title="Other"
-          color="pink"
-          shadowPosition="left"
-        >
-          <OtherText />
-        </InteractiveModal>
-        <InteractiveModal
-          idNumber="05"
-          title="Education"
-          color="orange"
-          shadowPosition="center"
-        >
-          <EducationText />
-        </InteractiveModal>
-        <InteractiveModal
-          idNumber="06"
-          title="Future plans"
-          color="white"
-          shadowPosition="right"
-        >
-          <FuturePlansText />
-        </InteractiveModal>
+      <div className="flex flex-wrap justify-center mt-16 sm:gap-16  md:gap-24">
+        {modals.map((modal, index) => {
+          return (
+            <InteractiveModal
+              key={modal.id}
+              idNumber={modal.id}
+              title={modal.title}
+              color={modal.color}
+              shadowPosition={getShadowPosition(index)}
+            >
+              {modal.content}
+            </InteractiveModal>
+          );
+        })}
       </div>
       <div className="flex justify-between mt-16 md:gap-32"></div>
     </section>

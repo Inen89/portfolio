@@ -74,7 +74,7 @@ const InteractiveModal = ({
   //#endregion
 
   return (
-    <div className="relative left-0 top-0 inline-block w-full p-2 sm:w-1/2 md:w-1/3 h-32 mb-6">
+    <div className="relative left-0 top-0 inline-block  p-2 w-11/12 sm:w-5/12 md:w-3/12 h-32 mb-6">
       {/* modal trigger */}
       <motion.div
         className="relative top-0 left-0 cursor-pointer rounded-lg hover:shadow-neon-yellow "

@@ -2,7 +2,6 @@ import AnchorLink from "react-anchor-link-smooth-scroll";
 
 export default function Link({ page, selectedPage, setSelectedPage }) {
   const lowerCasePage = page.toLowerCase();
-  console.log(lowerCasePage);
 
   return (
     <AnchorLink
