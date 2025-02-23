@@ -17,7 +17,7 @@ export default function Projects() {
           <div className="flex justify-center mt-5">
             {" "}
             <LineGradient
-              width="w-9/12 sm:w-10/12 md:w-7/12"
+              width="w-10/12 ss:w-9/12 sm:w-10/12 md:w-7/12"
               gradientColor="bg-gradient-magenta-white"
             />
           </div>
