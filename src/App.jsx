@@ -6,7 +6,7 @@ import About from "./scenes/About";
 import MySkills from "./scenes/MySkills";
 import Projects from "./scenes/Projects";
 import Contact from "./scenes/Contact";
-import Footer from "./components/Footer";
+import Footer from "./scenes/Footer";
 import DotGroup from "./components/DotGroup";
 
 function App() {

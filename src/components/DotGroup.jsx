@@ -5,7 +5,7 @@ const selectedStyles = `relative bg-aqua before:absolute before:w-6 before:h-6
 
 const DotGroup = ({ selectedPage, setSelectedPage }) => {
   return (
-    <div className="flex flex-col gap-6 fixed  top-[60%] right-2.5 sm:right-7">
+    <div className="flex flex-col gap-6 fixed  top-[55%] right-2.5 sm:right-7">
       <AnchorLink
         href="#home"
         className={`${
