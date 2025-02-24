@@ -51,6 +51,8 @@ export default {
           "linear-gradient(160deg, #210011 60%, #2E2E2E 100%)",
         "gradient-magenta-white":
           "linear-gradient(90deg, #E90076 45%, #F0F0F0 90%)",
+        "gradient-grey-white":
+          "linear-gradient(90deg, #616161 45%, #F0F0F0 90%)",
       },
 
       fontFamily: {

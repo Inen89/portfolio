@@ -1,4 +1,5 @@
 import { useForm } from "react-hook-form";
+import LineGradient from "../components/LineGradient";
 
 export default function Contact() {
   const {
@@ -34,16 +35,22 @@ export default function Contact() {
   const errorStyles = "text-red p-1 max-w-full";
 
   return (
-    <section id="contact" className="py-48">
+    <section id="contact" className="py-12 sm:py-40">
       {/* Header */}
-      <header>
-        <h2 className="text-6xl text-grey mb-10 text-center">
+      <header className="w-11/12 sm:w-7/12 mx-auto text-center">
+        <h2 className="text-grey font-playfair font-semibold text-5xl sm:text-6xl">
           Contact <span className="text-white">Me!</span>
         </h2>
+        <div className="flex justify-center mt-5 mb-10  sm:mb-20">
+          <LineGradient
+            width="w-11/12 ss:w-9/12 sm:w-10/12 md:w-7/12"
+            gradientColor="bg-gradient-grey-white"
+          />
+        </div>
       </header>
       {/* Form */}
       <form
-        className=" flex flex-col  w-7/12 mx-auto"
+        className=" flex flex-col w-full sm:w-8/12 md:w-7/12 mx-auto"
         target="_blank"
         onSubmit={onSubmit}
         action="https://formsubmit.co/5306281fb8f7f5d1c08eabda5ada014f"

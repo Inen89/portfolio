@@ -65,9 +65,9 @@ function App() {
       </div>
       <LineGradient gradientColor="bg-gradient-magenta-white" />
       <div className="bg-dark-grey">
-        <dir className="w-5/6 mx-auto h-full">
+        <div className="w-5/6 mx-auto h-full">
           <Contact />
-        </dir>
+        </div>
       </div>
       <div>
         <Footer />
