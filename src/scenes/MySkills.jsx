@@ -52,7 +52,6 @@ const MySkills = () => {
   ];
 
   return (
-    // poprawić margines
     <section id="skills" className="relative py-12 sm:py-40">
       {/* HEADER AND IMAGE SECTION */}
       <div className="md:flex justify-center items-center ">
@@ -80,19 +79,15 @@ const MySkills = () => {
         </div>
 
         <div className="basis-7/12 text-center md:text-left mt-5 sm:mt-10">
-          <header className="  text-center md:text-left w-fit mx-auto md:mx-0">
-            <h2 className="text-white text-nowrap font-playfair font-semibold text-5xl sm:text-6xl md:w-fit">
-              My<span className="text-lemon"> SKILLS</span>
-              <div className="flex justify-center mt-5">
-                <LineGradient
-                  width="w-full"
-                  gradientColor="bg-gradient-white-lemon"
-                />
-              </div>
-            </h2>
+          <header className="w-fit mx-auto md:mx-0 text-lemon text-nowrap font-playfair font-semibold text-5xl sm:text-6xl">
+            <span className="text-white">My </span>SKILLS
+            <LineGradient
+              width="w-full mt-5 mb-10  sm:mb-10"
+              gradientColor="bg-gradient-white-lemon"
+            />
           </header>
 
-          <p className="mt-5 sm:mt-10 mb-7 text-center sm:text-left items-center ">
+          <p className="mb-7 text-center sm:text-left items-center ">
             As a dedicated self-taught developer with a strong background in
             automation and SCADA systems, I have honed my expertise primarily in
             frontend technologies, while also building a foundational

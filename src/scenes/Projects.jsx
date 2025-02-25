@@ -7,21 +7,24 @@ import LineGradient from "../components/LineGradient";
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-12 sm:py-40">
+    <section
+      id="projects"
+      className="flex flex-col justify-center items-center py-12 sm:py-40"
+    >
       {/* HEADINGS */}
-      <div className=" w-11/12 sm:w-7/12 mx-auto text-center">
-        <div>
-          <p className="font-playfair font-semibold text-5xl sm:text-6xl">
-            <span className="text-magenta">PRO</span>JECTS
-          </p>
-          <div className="flex justify-center mt-5">
-            <LineGradient
-              width="w-10/12 ss:w-9/12 sm:w-10/12 md:w-7/12"
-              gradientColor="bg-gradient-magenta-white"
-            />
-          </div>
+
+      <header className="text-white text-nowrap font-playfair font-semibold text-5xl sm:text-6xl">
+        <span className="text-magenta">PRO</span>JECTS
+        <div className="mt-5 mb-10  sm:mb-20">
+          <LineGradient
+            width="w-full"
+            gradientColor="bg-gradient-magenta-white"
+          />
         </div>
-        <p className="mt-5 mb-10 sm:mt-10 sm:mb-20">
+      </header>
+
+      <div className=" w-11/12 sm:w-7/12 mx-auto text-center">
+        <p className="mb-10 sm:mb-20">
           On this page, you'll find selected projects that showcase my
           experience and skills in web application development. Each one has
           been created with passion and attention to detail, using modern

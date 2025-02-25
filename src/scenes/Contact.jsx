@@ -22,7 +22,7 @@ export default function Contact() {
   const inputWrapperStyles = "relative group z-0 w-full   ";
 
   const inputStyles =
-    "bg-dark-grey border-2 border-white text-white font-semibold placeholder-white px-4 py-2 rounded-md bg-transparent w-full h-14 focus:outline-none ";
+    "bg-dark-grey border-2 border-white text-white font-semibold placeholder-white px-3 py-2 rounded-md bg-transparent w-full h-14 focus:outline-none ";
 
   const spanStyles =
     "absolute top-0 left-0 h-14 z-[-1] w-0 bg-grey rounded-md group-focus-within:w-full  transition-all duration-1000";
@@ -35,19 +35,18 @@ export default function Contact() {
   const errorStyles = "text-red p-1 max-w-full";
 
   return (
-    <section id="contact" className="py-12 sm:py-40">
+    <section
+      id="contact"
+      className="flex flex-col justify-center items-center py-12 sm:py-40"
+    >
       {/* Header */}
-      <header className="w-11/12 sm:w-7/12 mx-auto text-center">
-        <h2 className="text-grey font-playfair font-semibold text-5xl sm:text-6xl">
-          Contact <span className="text-white">Me!</span>
-        </h2>
-        <div className="flex justify-center mt-5 mb-10  sm:mb-20">
-          <LineGradient
-            width="w-11/12 ss:w-9/12 sm:w-10/12 md:w-7/12"
-            gradientColor="bg-gradient-grey-white"
-          />
+      <header className="text-grey text-nowrap font-playfair font-semibold text-5xl sm:text-6xl">
+        <span className="text-white">Contact </span>Me!
+        <div className="mt-5 mb-10  sm:mb-20">
+          <LineGradient width="w-full" gradientColor="bg-gradient-white-grey" />
         </div>
       </header>
+
       {/* Form */}
       <form
         className=" flex flex-col w-full sm:w-8/12 md:w-7/12 mx-auto"

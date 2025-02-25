@@ -89,15 +89,10 @@ export default function About() {
       id="about"
       className="flex flex-col justify-center items-center gap-6 sm:gap-12 py-12  sm:py-40"
     >
-      <header className="w-11/12 sm:w-7/12 mx-auto text-center">
-        <h2 className="text-lime font-playfair font-semibold text-5xl sm:text-6xl">
-          About <span className="text-white">Me!</span>
-        </h2>
-        <div className="flex justify-center mt-5 mb-10  sm:mb-20">
-          <LineGradient
-            width="w-11/12 ss:w-9/12 sm:w-10/12 md:w-7/12"
-            gradientColor="bg-gradient-lime-white"
-          />
+      <header className="text-white text-nowrap font-playfair font-semibold text-5xl sm:text-6xl">
+        <span className="text-lime"> About </span>Me!
+        <div className="mt-5 mb-10  sm:mb-20">
+          <LineGradient width="w-full" gradientColor="bg-gradient-lime-white" />
         </div>
       </header>
 
