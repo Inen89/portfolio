@@ -7,7 +7,7 @@ import LineGradient from "../components/LineGradient";
 
 export default function Projects() {
   return (
-    <section id="projects" className="pt-12 pb-12 sm:pt-48 sm:pb-48">
+    <section id="projects" className="py-12 sm:py-40">
       {/* HEADINGS */}
       <div className=" w-11/12 sm:w-7/12 mx-auto text-center">
         <div>
@@ -15,7 +15,6 @@ export default function Projects() {
             <span className="text-magenta">PRO</span>JECTS
           </p>
           <div className="flex justify-center mt-5">
-            {" "}
             <LineGradient
               width="w-10/12 ss:w-9/12 sm:w-10/12 md:w-7/12"
               gradientColor="bg-gradient-magenta-white"

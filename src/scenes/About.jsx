@@ -87,7 +87,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className="flex flex-col justify-center items-center gap-6 sm:gap-12 py-20  sm:py-40"
+      className="flex flex-col justify-center items-center gap-6 sm:gap-12 py-12  sm:py-40"
     >
       <header className="w-11/12 sm:w-7/12 mx-auto text-center">
         <h2 className="text-lime font-playfair font-semibold text-5xl sm:text-6xl">
