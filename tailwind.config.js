@@ -55,7 +55,7 @@ export default {
           "linear-gradient(90deg, #616161 45%, #F0F0F0 90%)",
         "gradient-lime-white": "linear-gradient(90deg, lime 45%, white 90%)",
         "gradient-white-lemon":
-          "linear-gradient(90deg, white 45%, #FFFF00 90%)",
+          "linear-gradient(90deg, white 20%, #FFFF00 60%)",
       },
 
       fontFamily: {
