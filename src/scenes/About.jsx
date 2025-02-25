@@ -2,12 +2,13 @@ import { AnimatePresence, motion } from "framer-motion";
 
 import aboutMeImg from "../assets/img/AboutMe.jpg";
 import { useState } from "react";
+import LineGradient from "../components/LineGradient";
 
 export default function About() {
   const [showMore, setShowMore] = useState(false);
 
   const paragraphStyles =
-    "py-4 sm:px-6 rounded-md hover:bg-lime hover:bg-opacity-40";
+    "p-2  sm:px-3 rounded-md hover:bg-lime hover:bg-opacity-40";
 
   const paragraphs = [
     `Hi! My name is Grzegorz Łoś, and programming is my passion, which
@@ -86,16 +87,24 @@ export default function About() {
   return (
     <section
       id="about"
-      className="flex flex-col justify-center items-center gap-12 py-16 pt-24"
+      className="flex flex-col justify-center items-center gap-6 sm:gap-12 py-20  sm:py-40"
     >
-      <h2 className="heading text-6xl mb-10">
-        About <span className="text-lime">Me</span>
-      </h2>
+      <header className="w-11/12 sm:w-7/12 mx-auto text-center">
+        <h2 className="text-lime font-playfair font-semibold text-5xl sm:text-6xl">
+          About <span className="text-white">Me!</span>
+        </h2>
+        <div className="flex justify-center mt-5 mb-10  sm:mb-20">
+          <LineGradient
+            width="w-11/12 ss:w-9/12 sm:w-10/12 md:w-7/12"
+            gradientColor="bg-gradient-lime-white"
+          />
+        </div>
+      </header>
 
       <div className="relative flex items-center justify-center w-full h-auto">
         {/* Rotating circle border */}
         <motion.div
-          className="absolute border-2 border-x-lime  border-y-transparent rounded-full w-72 aspect-square max-w-[270px] "
+          className="absolute border-2 border-x-lime  border-y-transparent rounded-full w-48 sm:w-72 aspect-square max-w-[270px] "
           animate={{ rotate: 360 }}
           transition={{ repeat: Infinity, duration: 6, ease: "linear" }}
         ></motion.div>
@@ -103,14 +112,13 @@ export default function About() {
         <img
           src={aboutMeImg}
           alt="Profile"
-          className="w-52 aspect-square max-w-[250px] max-h-[250px] rounded-full border-2 border-lime object-cover"
+          className="w-32 sm:w-52 aspect-square max-w-[250px] max-h-[250px] rounded-full border-2 border-lime object-cover my-4 sm:my-8"
         />
       </div>
 
       <div className="about-content">
         <h3 className="text-center text-4xl mt-10">Frontend Developer</h3>
-
-        <div className="text-lg tracking-wider leading-relaxed py-8 sm:px-8">
+        <div className="text-base text-center sm:text-start py-8 sm:px-8">
           <AnimatePresence>
             {paragraphs
               .slice(0, showMore ? paragraphs.length : 1)
