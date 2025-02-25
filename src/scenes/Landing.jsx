@@ -11,13 +11,13 @@ export default function Landing({ setSelectedPage }) {
     <img
       src={profileImg}
       alt="landing-page-image"
-      className=" hover:saturate-200 transition duration-500 z-10 w-full max-w-[400px]  md:max-w-[600px]"
+      className=" hover:saturate-200 transition duration-500 z-10 w-full max-w-[200px] sm:max-w-[400px]  md:max-w-[600px]"
     />
   );
   return (
     <section
       id="home"
-      className="md:flex md:justify-between md:items-center md:h-full  gap-16 py-48"
+      className="md:flex md:justify-between md:items-center md:h-full  gap-16 py-12 pt-20 sm:py-40"
     >
       {/* IMAGE SECTION */}
 
@@ -38,7 +38,7 @@ export default function Landing({ setSelectedPage }) {
       <div className="z-30 basis-2/5 mt-12 md:mt-32">
         {/* HEADINGS */}
         <div>
-          <p className="text-6xl font-poppins font-semibold text-center md:text-start">
+          <p className="text-3xl md:text-5xl lg:text-6xl font-poppins font-semibold text-center md:text-start">
             Hi, I&apos;m Grzegorz Łoś
           </p>
           <div className="flex justify-center md:justify-start">
@@ -63,7 +63,7 @@ export default function Landing({ setSelectedPage }) {
           <AnchorLink
             className="relative bg-aqua border-aqua border-4 text-deep-blue text-center rounded-lg py-3 px-7 font-semibold z-30
           hover:text-aqua
-            before:content-[''] before:absolute before:inset-0 before:w-0 before:bg-deep-blue before:z-0
+            before:content-[''] before:absolute before:inset-0 before:w-0 before:bg-[#061B18] sm:before:bg-deep-blue before:z-0
             before:transition-all before:duration-500 
             hover:before:w-full hover:before:z-[-1]"
             onClick={() => setSelectedPage("contact")}
@@ -72,7 +72,7 @@ export default function Landing({ setSelectedPage }) {
             Get to Know Me
           </AnchorLink>
           <AnchorLink
-            className="relative rounded-lg border-aqua border-4 text-aqua text-center py-3 px-10 z-30
+            className="relative rounded-lg border-aqua border-4 text-aqua text-center py-3 px-10 font-semibold z-30
                       hover:text-deep-blue
                       before:content-[''] before:absolute before:inset-0 before:w-0 before:bg-aqua before:transition-all before:duration-500 before:z-0
                       before:hover:w-full before:hover:z-[-1]"
