@@ -1,5 +1,6 @@
 import { useForm } from "react-hook-form";
 import LineGradient from "../components/LineGradient";
+import { motion } from "framer-motion";
 
 export default function Contact() {
   const {
@@ -40,12 +41,22 @@ export default function Contact() {
       className="flex flex-col justify-center items-center py-12 sm:py-40"
     >
       {/* Header */}
-      <header className="text-grey text-nowrap font-playfair font-semibold text-5xl sm:text-6xl">
+      <motion.header
+        className="text-grey text-nowrap font-playfair font-semibold text-5xl sm:text-6xl"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.5 }}
+        transition={{ duration: 0.5 }}
+        variants={{
+          hidden: { opacity: 0, y: -50 },
+          visible: { opacity: 1, y: 0 },
+        }}
+      >
         <span className="text-white">Contact </span>Me!
         <div className="mt-5 mb-10  sm:mb-20">
           <LineGradient width="w-full" gradientColor="bg-gradient-white-grey" />
         </div>
-      </header>
+      </motion.header>
 
       {/* Form */}
       <form
@@ -57,7 +68,17 @@ export default function Contact() {
       >
         {/* Full Name */}
         <div className={inputContainerStyles}>
-          <div className={inputWrapperStyles}>
+          <motion.div
+            className={inputWrapperStyles}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 0.5 }}
+            variants={{
+              hidden: { opacity: 0, x: -100 },
+              visible: { opacity: 1, x: 0 },
+            }}
+          >
             <input
               className={inputStyles}
               type="text"
@@ -78,9 +99,19 @@ export default function Contact() {
               </p>
             )}
             <span className={spanStyles}></span>
-          </div>
+          </motion.div>
           {/* Email */}
-          <div className={inputWrapperStyles}>
+          <motion.div
+            className={inputWrapperStyles}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 0.5 }}
+            variants={{
+              hidden: { opacity: 0, x: 100 },
+              visible: { opacity: 1, x: 0 },
+            }}
+          >
             <input
               className={inputStyles}
               type="text"
@@ -97,11 +128,21 @@ export default function Contact() {
               </p>
             )}
             <span className={spanStyles}></span>
-          </div>
+          </motion.div>
         </div>
         {/* Mobile Number */}
         <div className={inputContainerStyles}>
-          <div className={inputWrapperStyles}>
+          <motion.div
+            className={inputWrapperStyles}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 0.5 }}
+            variants={{
+              hidden: { opacity: 0, x: -100 },
+              visible: { opacity: 1, x: 0 },
+            }}
+          >
             <input
               className={inputStyles}
               type="tel"
@@ -119,9 +160,19 @@ export default function Contact() {
               </p>
             )}
             <span className={spanStyles}></span>
-          </div>
+          </motion.div>
           {/* Email Subject */}
-          <div className={inputWrapperStyles}>
+          <motion.div
+            className={inputWrapperStyles}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 0.5 }}
+            variants={{
+              hidden: { opacity: 0, x: 100 },
+              visible: { opacity: 1, x: 0 },
+            }}
+          >
             <input
               className={inputStyles}
               type="text"
@@ -142,11 +193,21 @@ export default function Contact() {
               </p>
             )}
             <span className={spanStyles}></span>
-          </div>
+          </motion.div>
         </div>
         <div>
           {/* Text Area */}
-          <div className={inputWrapperStyles}>
+          <motion.div
+            className={inputWrapperStyles}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 0.5 }}
+            variants={{
+              hidden: { opacity: 0, y: 100 },
+              visible: { opacity: 1, y: 0 },
+            }}
+          >
             <textarea
               className={textareaStyles}
               name="message"
@@ -169,14 +230,24 @@ export default function Contact() {
               </p>
             )}
             <span className={textareaSpanStyles}></span>
-          </div>
+          </motion.div>
 
           {/* Hidden inputs */}
           <input type="hidden" name="_replyto" value={getValues("email")} />
           <input type="hidden" name="_subject" value={getValues("subject")} />
           <input type="hidden" name="_template" value="table"></input>
         </div>
-        <div className="flex justify-center my-10">
+        <motion.div
+          className="flex justify-center my-10"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 0.5 }}
+          variants={{
+            hidden: { opacity: 0, y: 100 },
+            visible: { opacity: 1, y: 0 },
+          }}
+        >
           <button
             className="relative bg-white border-white border-4 text-dark-grey rounded-lg py-3 px-7 font-semibold z-30
             hover:text-white
@@ -186,7 +257,7 @@ export default function Contact() {
           >
             Send Message
           </button>
-        </div>
+        </motion.div>
       </form>
     </section>
   );

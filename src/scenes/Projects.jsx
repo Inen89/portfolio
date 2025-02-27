@@ -4,16 +4,35 @@ import projectsData from "../assets/data/projects.json";
 import portfolioImg from "../assets/img/portfolio.jpg";
 import smartGuysImg from "../assets/img/smart-guys.jpg";
 import LineGradient from "../components/LineGradient";
+import { motion } from "framer-motion";
 
 export default function Projects() {
+  const container = {
+    hidden: {},
+    visible: {
+      transition: {
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
   return (
     <section
       id="projects"
       className="flex flex-col justify-center items-center py-12 sm:py-40"
     >
       {/* HEADINGS */}
-
-      <header className="text-white text-nowrap font-playfair font-semibold text-5xl sm:text-6xl">
+      <motion.header
+        className="text-white text-nowrap font-playfair font-semibold text-5xl sm:text-6xl"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.5 }}
+        transition={{ duration: 0.5 }}
+        variants={{
+          hidden: { opacity: 0, y: -50 },
+          visible: { opacity: 1, y: 0 },
+        }}
+      >
         <span className="text-magenta">PRO</span>JECTS
         <div className="mt-5 mb-10  sm:mb-20">
           <LineGradient
@@ -21,9 +40,19 @@ export default function Projects() {
             gradientColor="bg-gradient-magenta-white"
           />
         </div>
-      </header>
+      </motion.header>
 
-      <div className=" w-11/12 sm:w-7/12 mx-auto text-center">
+      <motion.div
+        className=" w-11/12 sm:w-7/12 mx-auto text-center"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.5 }}
+        transition={{ duration: 0.5 }}
+        variants={{
+          hidden: { opacity: 0, y: -50 },
+          visible: { opacity: 1, y: 0 },
+        }}
+      >
         <p className="mb-10 sm:mb-20">
           On this page, you'll find selected projects that showcase my
           experience and skills in web application development. Each one has
@@ -32,11 +61,17 @@ export default function Projects() {
           them, you can learn about the project descriptions, the technologies
           used, and see how they work in practice.
         </p>
-      </div>
+      </motion.div>
 
       {/* PROJECTS */}
       <div className="flex justify-center">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-1 ">
+        <motion.div
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-1 "
+          variants={container}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+        >
           {/* ROW 1 */}
           <div
             className="flex justify-center text-center items-center p-10 bg-orange
@@ -74,7 +109,7 @@ export default function Projects() {
           >
             SMOOTH USER EXPERIENCE
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

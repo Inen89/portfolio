@@ -4,6 +4,7 @@ import profileImg from "../assets/img/profile-image.jpg";
 import SocialMediaIcons from "../components/SocialMediaIcons";
 import TextAnim from "../components/TextAnim";
 import useMediaQuery from "../hooks/useMediaQuery";
+import { delay, motion } from "framer-motion";
 
 export default function Landing({ setSelectedPage }) {
   const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
@@ -37,7 +38,16 @@ export default function Landing({ setSelectedPage }) {
       {/* MAIN SECTION */}
       <div className="z-30 basis-2/5 mt-12 md:mt-32">
         {/* HEADINGS */}
-        <div>
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ delay: 0, duration: 0.5 }}
+          variants={{
+            hidden: { opacity: 0, x: -50 },
+            visible: { opacity: 1, x: 0 },
+          }}
+        >
           <p className="text-3xl md:text-5xl lg:text-6xl font-poppins font-semibold text-center md:text-start">
             Hi, I&apos;m Grzegorz Łoś
           </p>
@@ -57,9 +67,22 @@ export default function Landing({ setSelectedPage }) {
             into the latest frameworks, I’m always eager to learn and push the
             boundaries of web development.
           </p>
-        </div>
+        </motion.div>
         {/* CALL TO ACTION */}
-        <div className="flex mt-10 gap-6 justify-center md:justify-start">
+        <motion.div
+          className="flex mt-10 gap-6 justify-center md:justify-start"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{
+            delay: 0.2,
+            duration: 0.5,
+          }}
+          variants={{
+            hidden: { opacity: 0, x: -50 },
+            visible: { opacity: 1, x: 0 },
+          }}
+        >
           <AnchorLink
             className="relative bg-aqua border-aqua border-4 text-deep-blue text-center rounded-lg py-3 px-7 font-semibold z-30
           hover:text-aqua
@@ -81,10 +104,20 @@ export default function Landing({ setSelectedPage }) {
           >
             Let&apos;s Talk
           </AnchorLink>
-        </div>
-        <div className="mt-10">
+        </motion.div>
+        <motion.div
+          className="mt-10"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ delay: 0.4, duration: 0.5 }}
+          variants={{
+            hidden: { opacity: 0, x: -50 },
+            visible: { opacity: 1, x: 0 },
+          }}
+        >
           <SocialMediaIcons />
-        </div>
+        </motion.div>
       </div>
     </section>
   );

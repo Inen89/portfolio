@@ -9,6 +9,7 @@ import EducationText from "./MySkills/EducationText";
 import FuturePlansText from "./MySkills/FuturePlansText";
 import useMediaQuery from "../hooks/useMediaQuery";
 import LineGradient from "../components/LineGradient";
+import { motion } from "framer-motion";
 
 const MySkills = () => {
   const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
@@ -78,7 +79,17 @@ const MySkills = () => {
           )}
         </div>
 
-        <div className="basis-7/12 text-center md:text-left mt-5 sm:mt-10">
+        <motion.div
+          className="basis-7/12 text-center md:text-left mt-5 sm:mt-10"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ delay: 0, duration: 0.5 }}
+          variants={{
+            hidden: { opacity: 0, x: -50 },
+            visible: { opacity: 1, x: 0 },
+          }}
+        >
           <header className="w-fit mx-auto md:mx-0 text-lemon text-nowrap font-playfair font-semibold text-5xl sm:text-6xl">
             <span className="text-white">My </span>SKILLS
             <LineGradient
@@ -98,11 +109,22 @@ const MySkills = () => {
             insights into user-centered design and efficient problem-solving,
             making me a well-rounded candidate for any development role.
           </p>
-        </div>
+        </motion.div>
       </div>
       {/* SKILLS */}
 
-      <div className="flex flex-wrap justify-center mt-0 sm:mt-16 gap-y-0 sm:gap-y-10 sm:gap-x-16  md:gap-x-24 w-11/12 sm:w-full">
+      <motion.div
+        className="flex flex-wrap justify-center mt-0 sm:mt-16 gap-y-0 sm:gap-y-10 sm:gap-x-16  md:gap-x-24 w-11/12 sm:w-full"
+        variants={{
+          hidden: {},
+          visible: {
+            transition: { staggerChildren: 0.3 },
+          },
+        }}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.5 }}
+      >
         {modals.map((modal, index) => {
           return (
             <InteractiveModal
@@ -116,7 +138,7 @@ const MySkills = () => {
             </InteractiveModal>
           );
         })}
-      </div>
+      </motion.div>
     </section>
   );
 };

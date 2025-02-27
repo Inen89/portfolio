@@ -35,8 +35,8 @@ const InteractiveModal = ({
 
   //#region Variants
   const itemVariants = {
-    initial: { scale: 1 },
-    hover: { scale: 1.1 },
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.2 } },
   };
 
   const modalVariants = {
@@ -74,14 +74,15 @@ const InteractiveModal = ({
   //#endregion
 
   return (
-    <div className="relative left-0 top-0 inline-block  p-2 w-11/12 sm:w-5/12 md:w-3/12 h-32 mb-6">
+    <motion.div
+      className="relative left-0 top-0 inline-block  p-2 w-11/12 sm:w-5/12 md:w-3/12 h-32 mb-6"
+      variants={itemVariants}
+      whileHover={{ scale: 1.1 }}
+    >
       {/* modal trigger */}
-      <motion.div
+      <div
         className="relative top-0 left-0 cursor-pointer rounded-lg hover:shadow-neon-yellow "
         ref={triggerRef}
-        variants={itemVariants}
-        initial="initial"
-        whileHover="hover"
         onClick={() => {
           setIsOpen(true);
           const rect = triggerRef.current.getBoundingClientRect();
@@ -104,7 +105,7 @@ const InteractiveModal = ({
             } z-[-1] `}
           ></div>
         </div>
-      </motion.div>
+      </div>
       {createPortal(
         <AnimatePresence>
           {isOpen && (
@@ -140,7 +141,7 @@ const InteractiveModal = ({
         </AnimatePresence>,
         document.getElementById("dialog")
       )}
-    </div>
+    </motion.div>
   );
 };
 

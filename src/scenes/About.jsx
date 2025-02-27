@@ -1,4 +1,4 @@
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, delay, motion } from "framer-motion";
 
 import aboutMeImg from "../assets/img/AboutMe.jpg";
 import { useState } from "react";
@@ -74,13 +74,11 @@ export default function About() {
       opacity: 1,
       x: 0,
       y: 0,
-      transition: { type: "easeInOut", duration: 0.5 },
     },
     exit: {
       opacity: 0,
       x: 0,
       y: -50,
-      transition: { type: "easeInOut", duration: 0.5 },
     },
   };
 
@@ -112,7 +110,19 @@ export default function About() {
       </div>
 
       <div className="about-content">
-        <h3 className="text-center text-4xl mt-10">Frontend Developer</h3>
+        <motion.h3
+          className="text-center text-4xl mt-10"
+          initial="hidden"
+          whileInView="visible"
+          transition={{ delay: 0, duration: 0.5 }}
+          viewport={{ once: true, amount: 0.5 }}
+          variants={{
+            hidden: { opacity: 0, x: 0, y: -50 },
+            visible: { opacity: 1, x: 0, y: 0 },
+          }}
+        >
+          Frontend Developer
+        </motion.h3>
         <div className="text-base text-center sm:text-start py-8 sm:px-8">
           <AnimatePresence>
             {paragraphs
@@ -121,6 +131,7 @@ export default function About() {
                 <motion.p
                   key={index}
                   className={paragraphStyles}
+                  transition={{ delay: 0, duration: 0.5 }}
                   variants={paragraphVariants}
                   initial="hidden"
                   animate="visible"
@@ -131,7 +142,7 @@ export default function About() {
               ))}
           </AnimatePresence>
         </div>
-        <a
+        <motion.a
           className="relative block mx-auto w-fit bg-lime border-lime border-4 text-green rounded-lg py-3 px-7 font-semibold z-30
         hover:text-lime
             before:content-[''] before:absolute before:inset-0 before:w-0 before:bg-green before:z-0
@@ -139,9 +150,17 @@ export default function About() {
             hover:before:w-full hover:before:z-[-1]"
           href={!showMore ? "#about" : null}
           onClick={() => setShowMore((prevState) => !prevState)}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ delay: 0.5, duration: 0.5 }}
+          variants={{
+            hidden: { opacity: 0, x: 0, y: 50 },
+            visible: { opacity: 1, x: 0, y: 0 },
+          }}
         >
           {showMore ? "Show Less" : "Show More"}
-        </a>
+        </motion.a>
       </div>
     </section>
   );
