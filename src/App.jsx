@@ -28,7 +28,7 @@ function App() {
   }, []);
 
   return (
-    <main className="flex flex-col">
+    <main className="flex flex-col overflow-x-hidden">
       <Navbar
         selectedPage={selectedPage}
         setSelectedPage={setSelectedPage}
