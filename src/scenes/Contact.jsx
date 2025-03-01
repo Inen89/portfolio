@@ -39,7 +39,9 @@ export default function Contact({ handleInView }) {
   return (
     <InView
       onChange={handleInView}
-      threshold={0.5}
+      threshold={0.4}
+      delay={100}
+      as="section"
       id="contact"
       className="flex flex-col justify-center items-center py-12 sm:py-40"
     >

@@ -6,6 +6,7 @@ import smartGuysImg from "../assets/img/smart-guys.jpg";
 import LineGradient from "../components/LineGradient";
 import { motion } from "framer-motion";
 import { InView } from "react-intersection-observer";
+import useMediaQuery from "../hooks/useMediaQuery";
 
 export default function Projects({ handleInView }) {
   const container = {
@@ -16,11 +17,13 @@ export default function Projects({ handleInView }) {
       },
     },
   };
-
+  const isAboveSmallScreens = useMediaQuery("(min-width:768px)");
   return (
     <InView
       onChange={handleInView}
-      threshold={0.5}
+      threshold={isAboveSmallScreens ? "0.4" : "0.3"}
+      delay={100}
+      as="section"
       id="projects"
       className="flex flex-col justify-center items-center py-12 sm:py-40"
     >

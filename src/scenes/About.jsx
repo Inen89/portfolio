@@ -86,7 +86,9 @@ export default function About({ handleInView }) {
   return (
     <InView
       onChange={handleInView}
-      threshold={0.5}
+      threshold={0.4}
+      delay={100}
+      as="section"
       id="about"
       className="flex flex-col justify-center items-center gap-6 sm:gap-12 py-12  sm:py-40"
     >

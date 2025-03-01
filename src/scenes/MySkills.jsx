@@ -56,7 +56,9 @@ const MySkills = ({ handleInView }) => {
   return (
     <InView
       onChange={handleInView}
-      threshold={0.5}
+      threshold={isAboveSmallScreens ? "0.4" : "0.3"}
+      delay={100}
+      as="section"
       id="skills"
       className="relative py-12 sm:py-40"
     >

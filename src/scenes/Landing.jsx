@@ -19,7 +19,9 @@ export default function Landing({ setSelectedPage, handleInView }) {
   return (
     <InView
       onChange={handleInView}
-      threshold={0.5}
+      threshold={0.4}
+      delay={100}
+      as="section"
       id="home"
       className="md:flex md:justify-between md:items-center md:h-full  gap-16 py-12 pt-20 sm:py-40"
     >
