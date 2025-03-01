@@ -1,8 +1,9 @@
 import { useForm } from "react-hook-form";
 import LineGradient from "../components/LineGradient";
 import { motion } from "framer-motion";
+import { InView } from "react-intersection-observer";
 
-export default function Contact() {
+export default function Contact({ handleInView }) {
   const {
     register,
     trigger,
@@ -36,7 +37,9 @@ export default function Contact() {
   const errorStyles = "text-red p-1 max-w-full";
 
   return (
-    <section
+    <InView
+      onChange={handleInView}
+      threshold={0.5}
       id="contact"
       className="flex flex-col justify-center items-center py-12 sm:py-40"
     >
@@ -259,6 +262,6 @@ export default function Contact() {
           </button>
         </motion.div>
       </form>
-    </section>
+    </InView>
   );
 }

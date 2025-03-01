@@ -10,8 +10,9 @@ import FuturePlansText from "./MySkills/FuturePlansText";
 import useMediaQuery from "../hooks/useMediaQuery";
 import LineGradient from "../components/LineGradient";
 import { motion } from "framer-motion";
+import { InView } from "react-intersection-observer";
 
-const MySkills = () => {
+const MySkills = ({ handleInView }) => {
   const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
   const isAboveSmallScreens = useMediaQuery("(min-width:768px)");
 
@@ -53,7 +54,12 @@ const MySkills = () => {
   ];
 
   return (
-    <section id="skills" className="relative py-12 sm:py-40">
+    <InView
+      onChange={handleInView}
+      threshold={0.5}
+      id="skills"
+      className="relative py-12 sm:py-40"
+    >
       {/* HEADER AND IMAGE SECTION */}
       <div className="md:flex justify-center items-center ">
         <div className="flex justify-center md:order-2 md:justify-start">
@@ -139,7 +145,7 @@ const MySkills = () => {
           );
         })}
       </motion.div>
-    </section>
+    </InView>
   );
 };
 

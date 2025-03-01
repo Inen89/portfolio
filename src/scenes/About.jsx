@@ -1,10 +1,11 @@
-import { AnimatePresence, delay, motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 
 import aboutMeImg from "../assets/img/AboutMe.jpg";
 import { useState } from "react";
 import LineGradient from "../components/LineGradient";
+import { InView } from "react-intersection-observer";
 
-export default function About() {
+export default function About({ handleInView }) {
   const [showMore, setShowMore] = useState(false);
 
   const paragraphStyles =
@@ -83,7 +84,9 @@ export default function About() {
   };
 
   return (
-    <section
+    <InView
+      onChange={handleInView}
+      threshold={0.5}
       id="about"
       className="flex flex-col justify-center items-center gap-6 sm:gap-12 py-12  sm:py-40"
     >
@@ -162,6 +165,6 @@ export default function About() {
           {showMore ? "Show Less" : "Show More"}
         </motion.a>
       </div>
-    </section>
+    </InView>
   );
 }

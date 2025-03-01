@@ -5,8 +5,9 @@ import portfolioImg from "../assets/img/portfolio.jpg";
 import smartGuysImg from "../assets/img/smart-guys.jpg";
 import LineGradient from "../components/LineGradient";
 import { motion } from "framer-motion";
+import { InView } from "react-intersection-observer";
 
-export default function Projects() {
+export default function Projects({ handleInView }) {
   const container = {
     hidden: {},
     visible: {
@@ -17,7 +18,9 @@ export default function Projects() {
   };
 
   return (
-    <section
+    <InView
+      onChange={handleInView}
+      threshold={0.5}
       id="projects"
       className="flex flex-col justify-center items-center py-12 sm:py-40"
     >
@@ -111,6 +114,6 @@ export default function Projects() {
           </div>
         </motion.div>
       </div>
-    </section>
+    </InView>
   );
 }

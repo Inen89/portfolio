@@ -4,9 +4,10 @@ import profileImg from "../assets/img/profile-image.jpg";
 import SocialMediaIcons from "../components/SocialMediaIcons";
 import TextAnim from "../components/TextAnim";
 import useMediaQuery from "../hooks/useMediaQuery";
-import { delay, motion } from "framer-motion";
+import { motion } from "framer-motion";
+import { InView } from "react-intersection-observer";
 
-export default function Landing({ setSelectedPage }) {
+export default function Landing({ setSelectedPage, handleInView }) {
   const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
   const landingPageImg = (
     <img
@@ -16,7 +17,9 @@ export default function Landing({ setSelectedPage }) {
     />
   );
   return (
-    <section
+    <InView
+      onChange={handleInView}
+      threshold={0.5}
       id="home"
       className="md:flex md:justify-between md:items-center md:h-full  gap-16 py-12 pt-20 sm:py-40"
     >
@@ -119,6 +122,6 @@ export default function Landing({ setSelectedPage }) {
           <SocialMediaIcons />
         </motion.div>
       </div>
-    </section>
+    </InView>
   );
 }

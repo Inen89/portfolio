@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+
 import Navbar from "./scenes/NavBar";
 import Landing from "./scenes/Landing";
 import LineGradient from "./components/LineGradient";
@@ -13,6 +14,7 @@ function App() {
   const [selectedPage, setSelectedPage] = useState("home");
   const [isTopOfPage, setIsTopOfPage] = useState(true);
 
+  //handle scroll position
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY === 0) {
@@ -26,6 +28,12 @@ function App() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const handleInView = (inView, entry) => {
+    if (inView) {
+      setSelectedPage(entry.target.id);
+    }
+  };
 
   return (
     <main className="flex flex-col overflow-x-hidden">
@@ -42,31 +50,34 @@ function App() {
       </div>
       <div className="bg-gradient-deepblue-green">
         <div className="w-5/6 mx-auto h-full ">
-          <Landing setSelectedPage={setSelectedPage} />
+          <Landing
+            setSelectedPage={setSelectedPage}
+            handleInView={handleInView}
+          />
         </div>
       </div>
       <LineGradient gradientColor="bg-gradient-aqua-lime" />
       <div className="bg-gradient-green-yellow">
         <div className="w-5/6 mx-auto h-full">
-          <About />
+          <About handleInView={handleInView} />
         </div>
       </div>
       <LineGradient gradientColor="bg-gradient-lime-lemon" />
       <div className="bg-gradient-yellow-pink z-0">
         <div className="w-5/6 mx-auto h-full ">
-          <MySkills />
+          <MySkills handleInView={handleInView} />
         </div>
       </div>
       <LineGradient gradientColor="bg-gradient-lemon-magenta" />
       <div className="bg-gradient-pink-grey">
         <div className="w-5/6 mx-auto h-full ">
-          <Projects />
+          <Projects handleInView={handleInView} />
         </div>
       </div>
       <LineGradient gradientColor="bg-gradient-magenta-white" />
       <div className="bg-dark-grey">
         <div className="w-5/6 mx-auto h-full">
-          <Contact />
+          <Contact handleInView={handleInView} />
         </div>
       </div>
       <div>
