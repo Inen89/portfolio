@@ -1,11 +1,11 @@
 import { motion } from "framer-motion";
 
 export default function AutomationText() {
-  const listClass = `p-1 sm:p-2 px-2 sm:px-4 rounded-md w-full text-xs hover:bg-black hover:bg-opacity-20 hover:transition-all hover:brightness-200
+  const listClass = `p-1 sm:p-2 px-2 sm:px-4 rounded-md w-full text-xs sm:text-base hover:bg-black hover:bg-opacity-20 hover:transition-all hover:brightness-200
      hover:shadow-md hover:shadow-black hover:scale-105  hover:duration-500`;
   const boldClass = "font-bold";
   return (
-    <div className="px-8">
+    <div className="px-8 select-none">
       <h3 className="text-xl sm:text-3xl font-semibold mb-2 sm:mb-4">
         Automation and SCADA
       </h3>

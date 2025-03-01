@@ -92,10 +92,12 @@ const InteractiveModal = ({
         {/* faceplate */}
         <div className="relative h-32">
           <div className="z-10">
-            <p className="font-playfair font-semibold text-5xl ml-2">
+            <p className="font-poppins font-semibold text-5xl ml-2 text-stroke-black text-stone-300">
               {idNumber}
             </p>
-            <p className="font-playfair font-semibold text-3xl ml-2">{title}</p>
+            <p className="font-poppins font-semibold text-3xl ml-2  text-stroke-black text-stone-300">
+              {title}
+            </p>
           </div>
           <div
             className={`absolute right-0 top-0  w-3/4 h-32 ${
