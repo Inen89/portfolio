@@ -1,9 +1,9 @@
 
 # 🖥️ My Portfolio
-- [🖥️ My Portfolio](#-my-portfolio)
+- [🖥️ My Portfolio](#️-my-portfolio)
   - [📋 About The Project](#-about-the-project)
   - [🌐 Live Demo](#-live-demo)
-  - [Technologies](#technologies)
+  - [🛠️ Technologies](#️-technologies)
   - [📱 Features](#-features)
   - [🧩 Project Structure](#-project-structure)
   - [💡 Solutions provided in the app](#-solutions-provided-in-the-app)
@@ -22,7 +22,7 @@ Welcome to my personal portfolio website! This project showcases my frontend dev
 
 Visit the live portfolio at [Live Demo](https://inen89.github.io/portfolio/)
 
-##  Technologies
+## 🛠️ Technologies
 
 - **Frontend Framework**: React 18
 - **Build Tool**: Vite
