@@ -1,6 +1,15 @@
 
-# 🚀 My Portfolio
-[TOC]
+# 🖥️ My Portfolio
+- [🖥️ My Portfolio](#-my-portfolio)
+  - [📋 About The Project](#-about-the-project)
+  - [🌐 Live Demo](#-live-demo)
+  - [Technologies](#technologies)
+  - [📱 Features](#-features)
+  - [🧩 Project Structure](#-project-structure)
+  - [💡 Solutions provided in the app](#-solutions-provided-in-the-app)
+  - [🚀 How to Run Locally](#-how-to-run-locally)
+  - [📞 Contact](#-contact)
+  - [📋 License](#-license)
 ## 📋 About The Project
 
 
